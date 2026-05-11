@@ -2,7 +2,9 @@
 
 import { useQuery } from "@tanstack/react-query";
 import css from "./NoteDetails.client.module.css";
+
 import { useParams } from "next/navigation";
+
 import { fetchNoteById } from "@/lib/api";
 
 type Params = {
