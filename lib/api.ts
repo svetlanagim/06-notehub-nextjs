@@ -34,13 +34,12 @@ export const fetchNotes = async (
   return data;
 };
 
-export const fetchNoteById = async (id: string) => {
-  const { data } = await api.get(`/notes/${id}`);
+export const fetchNoteById = async (id: string): Promise<Note> => {
+  const { data } = await api.get<Note>(`/notes/${id}`);
   return data;
 };
 
-//Note Services
-export const createNote = async (body: CreateNoteBody) => {
+export const createNote = async (body: CreateNoteBody): Promise<Note> => {
   const { data } = await api.post<Note>("/notes", body);
   return data;
 };
