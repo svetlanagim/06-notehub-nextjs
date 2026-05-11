@@ -20,7 +20,6 @@ export default function Modal({ children, onClose }: ModalProps) {
 
     document.addEventListener("keydown", handleKeyDown);
 
-    // ❗ BLOCK PAGE SCROLL (REQUIRED BY REVIEWER)
     document.body.style.overflow = "hidden";
 
     return () => {

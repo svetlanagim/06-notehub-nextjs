@@ -76,11 +76,15 @@ export default function NoteForm({ onClose }: NoteFormProps) {
           <ErrorMessage name="tag" component="span" />
         </div>
         <div className={css.actions}>
-          <button type="button" onClick={onClose}>
+          <button className={css.cancelButton} type="button" onClick={onClose}>
             Cancel
           </button>
 
-          <button type="submit" disabled={mutation.isPending}>
+          <button
+            className={css.submitButton}
+            type="submit"
+            disabled={mutation.isPending}
+          >
             {mutation.isPending ? "Creating..." : "Create note"}
           </button>
         </div>

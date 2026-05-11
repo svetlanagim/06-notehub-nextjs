@@ -46,7 +46,9 @@ export default function NotesClient() {
           />
         )}
 
-        <button onClick={() => setIsOpen(true)}>Create note +</button>
+        <button className={css.button} onClick={() => setIsOpen(true)}>
+          Create note +
+        </button>
       </header>
 
       {isEmpty && <p>No notes found</p>}
